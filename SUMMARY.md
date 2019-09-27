@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* Kubernetes
+* [Kubernetes](kubernetes.md)
 
