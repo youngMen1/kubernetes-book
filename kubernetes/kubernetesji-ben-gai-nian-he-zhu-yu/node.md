@@ -6,5 +6,10 @@
 
 ## 怎么用
 
+```
+// 查看集群中有多少个Node
+kubectl get nodes
+```
+
 
 
