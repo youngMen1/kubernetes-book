@@ -9,6 +9,8 @@
 ```
 // 查看集群中有多少个Node
 kubectl get nodes
+// 查看某个Node的详细信息
+kubectl describe node <node_name>
 ```
 
 
