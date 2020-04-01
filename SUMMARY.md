@@ -7,6 +7,6 @@
   * [kubernetes基本概念和术语](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu.md)
     * [Master](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/master.md)
     * [Node](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/node.md)
-    * Pod
+    * [Pod](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/pod.md)
 * [Prometheus](prometheus.md)
 
