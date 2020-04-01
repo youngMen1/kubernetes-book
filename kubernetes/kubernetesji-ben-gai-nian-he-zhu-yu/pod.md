@@ -4,5 +4,5 @@
 
 pod、容器与Node的关系图
 
-PodIP+容器端口=Endpoint\(端点它代表着此pod里的一个服务进程的对外通信地址\)
+PodIP+容器端口=Endpoint\(端点，它代表着此pod里的一个服务进程的对外通信地址\)
 
