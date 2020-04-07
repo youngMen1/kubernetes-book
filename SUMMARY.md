@@ -8,8 +8,8 @@
     * [Master](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/master.md)
     * [Node](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/node.md)
     * [Pod](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/pod.md)
-    * Label\(标签\)
-    * Replication Controller
+    * [Label\(标签\)](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/labelbiao-7b7e29.md)
+    * [Replication Controller](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/replication-controller.md)
     * [Deployment](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/deployment.md)
     * Horizontal Pod Autoscaler
     * StatefulSet
