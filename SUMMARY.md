@@ -11,11 +11,11 @@
     * [Label\(标签\)](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/labelbiao-7b7e29.md)
     * [Replication Controller](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/replication-controller.md)
     * [Deployment](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/deployment.md)
-    * Horizontal Pod Autoscaler
-    * StatefulSet
-    * Service\(服务\)
-    * Volume\(磁盘卷\)
-    * Persistent Volume
+    * [Horizontal Pod Autoscaler](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/horizontal-pod-autoscaler.md)
+    * [StatefulSet](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/statefulset.md)
+    * [Service\(服务\)](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/servicefu-52a129.md)
+    * [Volume\(磁盘卷\)](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/volumeci-pan-537729.md)
+    * [Persistent Volume](kubernetes/kubernetesji-ben-gai-nian-he-zhu-yu/persistent-volume.md)
     * Namespace\(命名空间\)
     * Annotation\(注解\)
 * [Prometheus](prometheus.md)
