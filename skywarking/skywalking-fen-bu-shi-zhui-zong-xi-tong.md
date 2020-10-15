@@ -119,29 +119,9 @@ success
 
 以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
-  
+以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
-
-  
-
-
-作者：端碗吹水
-
-  
-
-
-链接：https://www.jianshu.com/p/ad47280954d7
-
-  
-
-
-来源：简书
-
-  
-
-
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  
-
+19037705-d486cac540fdc965.webp
 
   
 
