@@ -7,5 +7,4 @@ ansible是一种自动化运维工具,基于paramiko开发的,并且基于模块
 
 
 # 3.参考
-
-https://www.jianshu.com/p/c82737b5485c
+Ansible总结：https://www.jianshu.com/p/c82737b5485c
