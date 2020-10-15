@@ -46,5 +46,6 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 
 [http://skywalking.apache.org/downloads/](https://links.jianshu.com/go?to=http%3A%2F%2Fskywalking.apache.org%2Fdownloads%2F)
 
+这里我选择当前最新的6.6.0版本的二进制包：
 
 
