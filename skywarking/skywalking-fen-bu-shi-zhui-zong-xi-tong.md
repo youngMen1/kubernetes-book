@@ -35,8 +35,9 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 * 优秀的可视化方案
 
 
+更多内容可以参考官方文档：
 
-[SkyWalking 文档中文版（社区提供）](https://links.jianshu.com/go?to=https%3A%2F%2Fskyapm.github.io%2Fdocument-cn-translation-of-skywalking%2F)
+* [SkyWalking 文档中文版（社区提供）](https://links.jianshu.com/go?to=https%3A%2F%2Fskyapm.github.io%2Fdocument-cn-translation-of-skywalking%2F)
 
 * [Apache SkyWalking 官方文档](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapache%2Fskywalking%2Ftree%2Fmaster%2Fdocs)
 
