@@ -240,3 +240,8 @@ consumer里的配置文件也需要按照如上示例进行修改，这里之所
 点击链路上的节点可以查看到对应的详情：  
 ![](/static/image/19037705-8e265849fa12b513.webp)
 
+
+## 2.参考
+
+https://www.jianshu.com/p/2fd56627a3cf
+
