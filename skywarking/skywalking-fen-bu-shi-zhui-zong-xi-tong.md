@@ -48,6 +48,6 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 
 这里我选择当前最新的6.6.0版本的二进制包：
 
-![](/static/image/19037705-3ca72e9a4a2d7408.webp）
+![](/static/image/19037705-3ca72e9a4a2d7408.webp)
 
 
