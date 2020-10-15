@@ -210,16 +210,16 @@ consumer里的配置文件也需要按照如上示例进行修改，这里之所
 ```
 配置好agent之后，在IDEA中添加Spring Boot引导类的JVM参数，指定**skywalking-agent.jar**的目录路径：
 
-19037705-52712b48fc732a77.webp
+![](/static/image/19037705-52712b48fc732a77.webp)
 
 完成以上步骤后，分别启动producer和comsumer服务，请求/consumer接口，因为skywalking是懒加载的，需要进行请求才会连接收集服务：
-19037705-5432fdc4357a3877.webp
+![](/static/image/19037705-5432fdc4357a3877.webp)
 
 通过浏览器访问 **http://serverIP:8090** 默认的用户名密码为：admin/admin，登录成功后，效果如下图出现如下界面即表示启动成功
-15663120-c00c56c9763ffc5f.webp
+![](/static/image/15663120-c00c56c9763ffc5f.webp)
 
 接着到SkyWalking的“追踪”页面上，就可以查看到调用链路信息了。如下图所示：
-19037705-4b9aa9a8582898d4.webp
+![](/static/image/19037705-4b9aa9a8582898d4.webp)
 
 点击链路上的节点可以查看到对应的详情：
-19037705-8e265849fa12b513.webp
+![](/static/image/19037705-8e265849fa12b513.webp)
