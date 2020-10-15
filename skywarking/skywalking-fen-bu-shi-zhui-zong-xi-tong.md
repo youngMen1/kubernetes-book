@@ -34,7 +34,6 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 * 支持告警
 * 优秀的可视化方案
 
-
 更多内容可以参考官方文档：
 
 * [SkyWalking 文档中文版（社区提供）](https://links.jianshu.com/go?to=https%3A%2F%2Fskyapm.github.io%2Fdocument-cn-translation-of-skywalking%2F)
@@ -42,5 +41,8 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 * [Apache SkyWalking 官方文档](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapache%2Fskywalking%2Ftree%2Fmaster%2Fdocs)
 
 ## 1.2.Linux环境搭建SkyWalking服务
+
+对SkyWalking有一个大致的了解后，本小节我们来在CentOS7上搭建 SkyWalking 服务。首先我们需要获取到SkyWalking的下载地址，官方下载地址如下：
+
 
 
