@@ -213,3 +213,4 @@ consumer里的配置文件也需要按照如上示例进行修改，这里之所
 19037705-52712b48fc732a77.webp
 
 完成以上步骤后，分别启动producer和comsumer服务，请求/consumer接口，因为skywalking是懒加载的，需要进行请求才会连接收集服务：
+19037705-5432fdc4357a3877.webp
