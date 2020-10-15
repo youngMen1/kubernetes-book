@@ -14,12 +14,11 @@ Ansible被定义为配置管理工具,配置管理工具通常具有以下功能
 
 
 
-| 项目 |
-| :--- |
 
 
-| Puppet | SaltStack | Ansible |
-| :--- | :--- | :--- |
+
+| 项目 | Puppet | SaltStack | Ansible |
+| :--- | :--- | :--- | :--- |
 
 
 | 开发语言 | Ruby | Python | Python |
