@@ -3,7 +3,10 @@
 ## 1.1.SkyWalking简介
 
 ```
-SkyWalking是一个开源的观测平台，用于从服务和云原生等基础设施中收集、分析、聚合以及可视化数据。SkyWalking 提供了一种简便的方式来清晰地观测分布式系统，甚至可以观测横跨不同云的系统。SkyWalking 更像是一种现代的应用程序性能监控（Application Performance Monitoring，即APM）工具，专为云原生，基于容器以及分布式系统而设计
+SkyWalking是一个开源的观测平台，用于从服务和云原生等基础设施中收集、分析、聚合以及可视化数据。
+SkyWalking 提供了一种简便的方式来清晰地观测分布式系统，甚至可以观测横跨不同云的系统。
+SkyWalking 更像是一种现代的应用程序性能监控（Application Performance Monitoring，即APM）工具，专为云原生，
+基于容器以及分布式系统而设计
 ```
 
 SkyWalking 在逻辑上分为四部分：**探针、平台后端、存储和用户界面**。其架构图如下：  
@@ -106,23 +109,20 @@ success
 ![](/static/image/19037705-35f85f77e4bbde93.webp)
 
 ## 1.2.Windows搭建SkyWalking服务
-Windows下的搭建就更简单了，首先下载Windows平台下的包：
+
+Windows下的搭建就更简单了，首先下载Windows平台下的包：  
 ![](/static/image/19037705-478c92b0826f8a73.webp)
 
 解压后目录文件如下：
 
-![](/static/image/19037705-c729f98480b9825f.webp)
-双击bin目录下的**startup.bat**文件就可以运行SkyWalking服务了：
+![](/static/image/19037705-c729f98480b9825f.webp)  
+双击bin目录下的**startup.bat**文件就可以运行SkyWalking服务了：  
 ![](/static/image/19037705-21e39d62e0c2d6c6.webp)
 
-这里之所以介绍Windows下的搭建，是因为当SkyWalking收集服务部署在远程服务器上时，本地要进行调试的话得用到agent目录下的jar包：
+这里之所以介绍Windows下的搭建，是因为当SkyWalking收集服务部署在远程服务器上时，本地要进行调试的话得用到agent目录下的jar包：  
 ![](/static/image/19037705-0b4b13e649e1a2fc.webp)
 
 该agent文件夹，可以单独复制出放在项目系统所在服务器的任意目录下。agent文件夹下的skywalking-agent.jar即为监控代理程序，只需要在jvm的启动命令中加载该jar包，即可完成监控代理。
-
-
-
-
 
 ## 1.4.服务链路追踪
 
@@ -138,7 +138,7 @@ Windows下的搭建就更简单了，首先下载Windows平台下的包：
 
 以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
-###1.4.1.项目整合
+### 1.4.1.项目整合
 
 以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
@@ -147,7 +147,6 @@ Windows下的搭建就更简单了，首先下载Windows平台下的包：
 这两个项目中均包含基础的组件依赖：nacos-discovery、openfeign及web。因为SkyWalking是通过Java agent这种语言探针的方式进行数据的收集和上传，所以不需要像zipkin那样添加额外的依赖和配置。
 
 consumer将调用producer提供的接口，以达到后续在SkyWalking上展示一个简单的调用链路效果。故在producer中编写一个接口，代码如下：
-
 
 ```
 @Slf4j
@@ -164,7 +163,6 @@ public class ProducerController {
 ```
 
 而consumer也有一个接口，该接口内则是调用了producer的接口。代码如下：
-
 
 ```
 @Slf4j
@@ -184,8 +182,8 @@ public class ConsumerController {
     }
 }
 ```
-**ProducerClient**代码如下：
 
+**ProducerClient**代码如下：
 
 ```
 @FeignClient("producer")
@@ -208,7 +206,6 @@ public interface ProducerClient {
 
 接着分别编辑这两个目录下的**config/agent.config**文件，该文件是agent的配置文件。修改其中的服务名称，以及skywalking平台后端服务的连接地址。producer配置示例如下：
 
-
 ```
 # The service name in UI 服务名称
 agent.service_name=${SW_AGENT_NAME:producer}
@@ -221,24 +218,25 @@ consumer里的配置文件也需要按照如上示例进行修改，这里之所
 
 如果不想为每个服务都单独拷贝一个agent目录，则可以通过添加JVM启动参数来覆写配置项，这两种方式视实际情况选择即可。如下示例：
 
-
 ```
 -javaagent:E:\skywalking\apache-skywalking-apm-bin\agent\skywalking-agent.jar
 -Dskywalking.agent.service_name=consumer
 -Dskywalking.collector.backend_service=192.168.0.71:11800
 ```
+
 配置好agent之后，在IDEA中添加Spring Boot引导类的JVM参数，指定**skywalking-agent.jar**的目录路径：
 
 ![](/static/image/19037705-52712b48fc732a77.webp)
 
-完成以上步骤后，分别启动producer和comsumer服务，请求/consumer接口，因为skywalking是懒加载的，需要进行请求才会连接收集服务：
+完成以上步骤后，分别启动producer和comsumer服务，请求/consumer接口，因为skywalking是懒加载的，需要进行请求才会连接收集服务：  
 ![](/static/image/19037705-5432fdc4357a3877.webp)
 
-通过浏览器访问 **http://serverIP:8090** 默认的用户名密码为：admin/admin，登录成功后，效果如下图出现如下界面即表示启动成功
+通过浏览器访问 [http://serverIP:8090](http://serverIP:8090) 默认的用户名密码为：admin/admin，登录成功后，效果如下图出现如下界面即表示启动成功  
 ![](/static/image/15663120-c00c56c9763ffc5f.webp)
 
-接着到SkyWalking的“追踪”页面上，就可以查看到调用链路信息了。如下图所示：
+接着到SkyWalking的“追踪”页面上，就可以查看到调用链路信息了。如下图所示：  
 ![](/static/image/19037705-4b9aa9a8582898d4.webp)
 
-点击链路上的节点可以查看到对应的详情：
+点击链路上的节点可以查看到对应的详情：  
 ![](/static/image/19037705-8e265849fa12b513.webp)
+
