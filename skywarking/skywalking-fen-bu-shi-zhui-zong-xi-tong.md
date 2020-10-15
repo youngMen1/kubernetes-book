@@ -119,10 +119,13 @@ success
 
 以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
+###1.4.1.项目整合
+
 以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
 19037705-d486cac540fdc965.webp
 
-  
+这两个项目中均包含基础的组件依赖：nacos-discovery、openfeign及web。因为SkyWalking是通过Java agent这种语言探针的方式进行数据的收集和上传，所以不需要像zipkin那样添加额外的依赖和配置。
 
+consumer将调用producer提供的接口，以达到后续在SkyWalking上展示一个简单的调用链路效果。故在producer中编写一个接口，代码如下：
 
