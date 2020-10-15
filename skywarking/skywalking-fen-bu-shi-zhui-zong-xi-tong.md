@@ -182,4 +182,6 @@ public interface ProducerClient {
 
 然后将skywalking里的agent目录下的所有文件拷贝出来，分别粘贴到这两个新建的目录中：
 
+19037705-36b4bb52c3cd4632.webp
+
 
