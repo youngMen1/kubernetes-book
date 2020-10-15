@@ -96,3 +96,15 @@ success
 若希望允许远程传输，则还需要开放11800（gRPC）和12800（rest）端口，远程agent将通过该端口传输收集的数据：
 
 
+```
+[root@localhost /usr/local/skywalking]# firewall-cmd --zone=public --add-port=11800/tcp --permanent
+success
+[root@localhost /usr/local/skywalking]# firewall-cmd --zone=public --add-port=12800/tcp --permanent
+success
+[root@localhost /usr/local/skywalking]# firewall-cmd --reload
+success
+[root@localhost /usr/local/skywalking]#
+```
+
+
+
