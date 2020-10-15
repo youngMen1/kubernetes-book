@@ -187,4 +187,28 @@ public interface ProducerClient {
 
 ![](/static/image/19037705-4858fc17e2421cec.webp)
 
+接着分别编辑这两个目录下的**config/agent.config**文件，该文件是agent的配置文件。修改其中的服务名称，以及skywalking平台后端服务的连接地址。producer配置示例如下：
+
+
+```
+# The service name in UI 服务名称
+agent.service_name=${SW_AGENT_NAME:producer}
+
+# Backend service addresses. 收集后端服务的地址
+collector.backend_service=${SW_AGENT_COLLECTOR_BACKEND_SERVICES:192.168.0.71:11800}
+```
+
+consumer里的配置文件也需要按照如上示例进行修改，这里之所以分别拷贝了两个agent是为了让不同的服务使用不同的配置文件。
+
+如果不想为每个服务都单独拷贝一个agent目录，则可以通过添加JVM启动参数来覆写配置项，这两种方式视实际情况选择即可。如下示例：
+
+
+```
+-javaagent:E:\skywalking\apache-skywalking-apm-bin\agent\skywalking-agent.jar
+-Dskywalking.agent.service_name=consumer
+-Dskywalking.collector.backend_service=192.168.0.71:11800
+```
+配置好agent之后，在IDEA中添加Spring Boot引导类的JVM参数，指定**skywalking-agent.jar**的目录路径：
+
+19037705-52712b48fc732a77.webp
 
