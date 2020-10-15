@@ -106,5 +106,5 @@ success
 [root@localhost /usr/local/skywalking]#
 ```
 正常启动成功后，使用浏览器访问主页如下：
-19037705-35f85f77e4bbde93.webp
+![](/static/image/19037705-35f85f77e4bbde93.webp)
 
