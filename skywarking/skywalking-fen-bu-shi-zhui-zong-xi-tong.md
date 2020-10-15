@@ -216,7 +216,7 @@ consumer里的配置文件也需要按照如上示例进行修改，这里之所
 ![](/static/image/19037705-5432fdc4357a3877.webp)
 
 通过浏览器访问 **http://serverIP:8090** 默认的用户名密码为：admin/admin，登录成功后，效果如下图出现如下界面即表示启动成功
-![](/static/image/15663120-c00c56c9763ffc5f.webp)
+![](/static/image/微信截图_20201015150519.png)
 
 接着到SkyWalking的“追踪”页面上，就可以查看到调用链路信息了。如下图所示：
 ![](/static/image/19037705-4b9aa9a8582898d4.webp)
