@@ -123,7 +123,7 @@ success
 
 以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
 
-19037705-d486cac540fdc965.webp
+![](/static/image/19037705-d486cac540fdc965.webp)
 
 这两个项目中均包含基础的组件依赖：nacos-discovery、openfeign及web。因为SkyWalking是通过Java agent这种语言探针的方式进行数据的收集和上传，所以不需要像zipkin那样添加额外的依赖和配置。
 
@@ -178,12 +178,13 @@ public interface ProducerClient {
 ```
 
 完成代码编写后，接下来我们需要为每个服务配置一个agent，首先创建两个与producer和consumer服务对应的目录：
-19037705-9afd99497109a03e.webp
+
+![](/static/image/19037705-9afd99497109a03e.webp)
 
 然后将skywalking里的agent目录下的所有文件拷贝出来，分别粘贴到这两个新建的目录中：
 
-19037705-36b4bb52c3cd4632.webp
+![](/static/image/19037705-36b4bb52c3cd4632.webp)
 
-19037705-4858fc17e2421cec.webp
+![](/static/image/19037705-4858fc17e2421cec.webp)
 
 
