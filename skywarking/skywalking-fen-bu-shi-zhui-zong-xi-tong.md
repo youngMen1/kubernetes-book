@@ -107,7 +107,22 @@ success
 
 ## 1.2.Windows搭建SkyWalking服务
 Windows下的搭建就更简单了，首先下载Windows平台下的包：
-19037705-478c92b0826f8a73.webp
+![](/static/image/19037705-478c92b0826f8a73.webp)
+
+解压后目录文件如下：
+
+![](/static/image/19037705-c729f98480b9825f.webp)
+双击bin目录下的**startup.bat**文件就可以运行SkyWalking服务了：
+![](/static/image/19037705-21e39d62e0c2d6c6.webp)
+
+这里之所以介绍Windows下的搭建，是因为当SkyWalking收集服务部署在远程服务器上时，本地要进行调试的话得用到agent目录下的jar包：
+![](/static/image/19037705-0b4b13e649e1a2fc.webp)
+
+该agent文件夹，可以单独复制出放在项目系统所在服务器的任意目录下。agent文件夹下的skywalking-agent.jar即为监控代理程序，只需要在jvm的启动命令中加载该jar包，即可完成监控代理。
+
+
+
+
 
 ## 1.4.服务链路追踪
 
