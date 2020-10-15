@@ -52,7 +52,6 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 
 复制下载地址到服务器上进行下载并解压，具体步骤如下：
 
-
 ```
 [root@localhost ~]# cd /usr/local/src
 [root@localhost /usr/local/src]# wget http://mirrors.tuna.tsinghua.edu.cn/apache/skywalking/6.6.0/apache-skywalking-apm-6.6.0.tar.gz
@@ -69,11 +68,10 @@ drwxrwxr-x 3 1001 1002 4.0K Dec 28 18:22 licenses
 drwxr-xr-x 2 root root  221 Dec 28 18:22 config
 drwxr-xr-x 2 root root  241 Dec 28 18:22 bin
 drwxrwxr-x 8 1001 1002  143 Dec 24 14:21 agent
-[root@localhost /usr/local/skywalking]# 
+[root@localhost /usr/local/skywalking]#
 ```
 
 运行bin目录下的**startup.sh**脚本即可启动skywalking服务：
-
 
 ```
 [root@localhost /usr/local/skywalking]# bin/startup.sh
@@ -83,7 +81,6 @@ SkyWalking Web Application started successfully!
 ```
 
 SkyWalking控制台服务默认监听8080端口，若有防火墙需要开放该端口：
-
 
 ```
 [root@localhost /usr/local/skywalking]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
@@ -95,7 +92,6 @@ success
 
 若希望允许远程传输，则还需要开放11800（gRPC）和12800（rest）端口，远程agent将通过该端口传输收集的数据：
 
-
 ```
 [root@localhost /usr/local/skywalking]# firewall-cmd --zone=public --add-port=11800/tcp --permanent
 success
@@ -105,7 +101,8 @@ success
 success
 [root@localhost /usr/local/skywalking]#
 ```
-正常启动成功后，使用浏览器访问主页如下：
+
+正常启动成功后，使用浏览器访问主页如下：  
 ![](/static/image/19037705-35f85f77e4bbde93.webp)
 
 ## 1.4.服务链路追踪
@@ -113,5 +110,39 @@ success
 目前主要的一些 APM 工具有: Cat、Zipkin、Pinpoint、SkyWalking，这里主要介绍 SkyWalking ，它是一款优秀的国产 APM 工具，包括了分布式追踪、性能指标分析、应用和服务依赖分析等。
 
 在本文中主要介绍如何使用SkyWalking来实现服务链路追踪，关于服务链路追踪的概念在下文中已进行过说明，这里就不再赘述了：
+
+* [Spring Cloud Sleuth + Zipkin 实现服务追踪](https://links.jianshu.com/go?to=https%3A%2F%2Fblog.51cto.com%2Fzero01%2F2173394)
+
+目前有多种工具可以实现服务链路追踪，主流的工具对比可以参考如下文章：
+
+* [https://www.jianshu.com/p/0fbbf99a236e](https://www.jianshu.com/p/0fbbf99a236e)
+
+以上小节完成了SkyWalking平台服务的搭建，接下来进入项目整合环节，将SkyWalking提供的agent与我们的项目进行整合，以达到监控目的。这里事先创建了两个简单的Spring Cloud项目，分别是consumer和producer：
+
+  
+
+
+  
+
+
+作者：端碗吹水
+
+  
+
+
+链接：https://www.jianshu.com/p/ad47280954d7
+
+  
+
+
+来源：简书
+
+  
+
+
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  
+
+
+  
 
 
