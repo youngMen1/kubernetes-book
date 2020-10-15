@@ -41,5 +41,6 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 
 * [Apache SkyWalking 官方文档](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapache%2Fskywalking%2Ftree%2Fmaster%2Fdocs)
 
+## 1.2.Linux环境搭建SkyWalking服务
 
 
