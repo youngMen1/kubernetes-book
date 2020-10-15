@@ -53,3 +53,25 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 复制下载地址到服务器上进行下载并解压，具体步骤如下：
 
 
+```
+[root@localhost ~]# cd /usr/local/src
+[root@localhost /usr/local/src]# wget http://mirrors.tuna.tsinghua.edu.cn/apache/skywalking/6.6.0/apache-skywalking-apm-6.6.0.tar.gz
+[root@localhost /usr/local/src]# mkdir ../skywalking && tar -zxvf apache-skywalking-apm-6.6.0.tar.gz -C ../skywalking --strip-components 1
+[root@localhost /usr/local/src]# cd ../skywalking/
+[root@localhost /usr/local/skywalking]# ll -rh  # 解压后的目录文件如下
+total 88K
+drwxr-xr-x 2 root root   53 Dec 28 18:22 webapp
+-rw-rw-r-- 1 1001 1002 2.0K Dec 24 14:10 README.txt
+drwxrwxr-x 2 1001 1002  12K Dec 24 14:28 oap-libs
+-rwxrwxr-x 1 1001 1002  32K Dec 24 14:10 NOTICE
+drwxrwxr-x 3 1001 1002 4.0K Dec 28 18:22 licenses
+-rwxrwxr-x 1 1001 1002  29K Dec 24 14:10 LICENSE
+drwxr-xr-x 2 root root  221 Dec 28 18:22 config
+drwxr-xr-x 2 root root  241 Dec 28 18:22 bin
+drwxrwxr-x 8 1001 1002  143 Dec 24 14:21 agent
+[root@localhost /usr/local/skywalking]# 
+```
+
+
+
+
