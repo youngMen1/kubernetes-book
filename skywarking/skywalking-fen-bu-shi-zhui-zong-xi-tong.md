@@ -242,6 +242,6 @@ consumer里的配置文件也需要按照如上示例进行修改，这里之所
 
 
 ## 2.参考
-
+SkyWalking 分布式追踪系统：
 https://www.jianshu.com/p/2fd56627a3cf
 
