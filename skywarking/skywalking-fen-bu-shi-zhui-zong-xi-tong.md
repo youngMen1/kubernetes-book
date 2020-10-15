@@ -5,7 +5,8 @@
 ```
 SkyWalking是一个开源的观测平台，用于从服务和云原生等基础设施中收集、分析、聚合以及可视化数据。SkyWalking 提供了一种简便的方式来清晰地观测分布式系统，甚至可以观测横跨不同云的系统。SkyWalking 更像是一种现代的应用程序性能监控（Application Performance Monitoring，即APM）工具，专为云原生，基于容器以及分布式系统而设计
 ```
-SkyWalking 在逻辑上分为四部分：**探针、平台后端、存储和用户界面**。其架构图如下：
+
+SkyWalking 在逻辑上分为四部分：**探针、平台后端、存储和用户界面**。其架构图如下：  
 ![](/static/image/19037705-c6cd5fe0547e57a1.webp)
 
 * 探针：基于不同的来源探针可能是不一样的，但作用都是收集数据，将数据格式化为 SkyWalking 适用的格式。例如在Java中则是做字节码植入，无侵入式的收集，并通过 HTTP 或者 gRPC 方式发送数据到平台后端
@@ -16,7 +17,7 @@ SkyWalking 在逻辑上分为四部分：**探针、平台后端、存储和用�
 
 * 用户界面：也就是SkyWalking的可视化界面，UI非常炫酷且强大，同样它也是可定制以匹配你已存在的后端的
 
-SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解决方案。例如为Java、C#及Node.js提供语言自动探针，无侵入式的收集。同时也为一些编译型语言C++、GO等提供了手动打点 SDK（目前还未支持）。除此之外，还可以使用服务网格基础探针来收集数据，以帮助了解整个分布式系统。
+SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解决方案。例如为Java、C\#及Node.js提供语言自动探针，无侵入式的收集。同时也为一些编译型语言C++、GO等提供了手动打点 SDK（目前还未支持）。除此之外，还可以使用服务网格基础探针来收集数据，以帮助了解整个分布式系统。
 
 在SkyWalking中也存在服务、服务实例及端点概念，因为SkyWalking就是提供了这些概念的观测能力：
 
@@ -34,6 +35,10 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 * 优秀的可视化方案
 
 
+
+[SkyWalking 文档中文版（社区提供）](https://links.jianshu.com/go?to=https%3A%2F%2Fskyapm.github.io%2Fdocument-cn-translation-of-skywalking%2F)
+
+* [Apache SkyWalking 官方文档](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapache%2Fskywalking%2Ftree%2Fmaster%2Fdocs)
 
 
 
