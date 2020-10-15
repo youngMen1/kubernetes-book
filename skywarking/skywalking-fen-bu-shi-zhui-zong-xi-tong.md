@@ -44,5 +44,7 @@ SkyWalking 为观察和监控分布式系统提供了许多不同场景下的解
 
 对SkyWalking有一个大致的了解后，本小节我们来在CentOS7上搭建 SkyWalking 服务。首先我们需要获取到SkyWalking的下载地址，官方下载地址如下：
 
+[http://skywalking.apache.org/downloads/](https://links.jianshu.com/go?to=http%3A%2F%2Fskywalking.apache.org%2Fdownloads%2F)
+
 
 
