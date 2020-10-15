@@ -75,3 +75,12 @@ drwxrwxr-x 8 1001 1002  143 Dec 24 14:21 agent
 运行bin目录下的**startup.sh**脚本即可启动skywalking服务：
 
 
+```
+[root@localhost /usr/local/skywalking]# bin/startup.sh
+SkyWalking OAP started successfully!
+SkyWalking Web Application started successfully!
+[root@localhost /usr/local/skywalking]#
+```
+
+
+
