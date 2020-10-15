@@ -108,3 +108,8 @@ success
 正常启动成功后，使用浏览器访问主页如下：
 ![](/static/image/19037705-35f85f77e4bbde93.webp)
 
+## 1.4.服务链路追踪
+
+目前主要的一些 APM 工具有: Cat、Zipkin、Pinpoint、SkyWalking，这里主要介绍 SkyWalking ，它是一款优秀的国产 APM 工具，包括了分布式追踪、性能指标分析、应用和服务依赖分析等。
+
+
