@@ -112,4 +112,6 @@ success
 
 目前主要的一些 APM 工具有: Cat、Zipkin、Pinpoint、SkyWalking，这里主要介绍 SkyWalking ，它是一款优秀的国产 APM 工具，包括了分布式追踪、性能指标分析、应用和服务依赖分析等。
 
+在本文中主要介绍如何使用SkyWalking来实现服务链路追踪，关于服务链路追踪的概念在下文中已进行过说明，这里就不再赘述了：
+
 
