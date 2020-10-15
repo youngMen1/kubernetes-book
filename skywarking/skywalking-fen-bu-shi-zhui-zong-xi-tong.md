@@ -82,5 +82,7 @@ SkyWalking Web Application started successfully!
 [root@localhost /usr/local/skywalking]#
 ```
 
+SkyWalking控制台服务默认监听8080端口，若有防火墙需要开放该端口：
+
 
 
