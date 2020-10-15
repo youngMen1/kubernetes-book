@@ -105,6 +105,6 @@ success
 success
 [root@localhost /usr/local/skywalking]#
 ```
-
+正常启动成功后，使用浏览器访问主页如下：
 
 
