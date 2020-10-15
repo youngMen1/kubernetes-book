@@ -129,3 +129,54 @@ success
 
 consumer将调用producer提供的接口，以达到后续在SkyWalking上展示一个简单的调用链路效果。故在producer中编写一个接口，代码如下：
 
+
+```
+@Slf4j
+@RestController
+@RequestMapping("/producer")
+public class ProducerController {
+
+    @GetMapping
+    public String producer() {
+        log.info("received a request");
+        return "this message from producer";
+    }
+}
+```
+
+而consumer也有一个接口，该接口内则是调用了producer的接口。代码如下：
+
+
+```
+@Slf4j
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/consumer")
+public class ConsumerController {
+
+    private final ProducerClient producerClient;
+
+    @GetMapping
+    public String consumer() {
+        log.info("consumer something");
+        // 通过feign调用
+        String result = producerClient.producer();
+        return "consumer: " + result;
+    }
+}
+```
+**ProducerClient**代码如下：
+
+
+```
+@FeignClient("producer")
+public interface ProducerClient {
+
+    @GetMapping("/producer")
+    String producer();
+}
+```
+
+完成代码编写后，接下来我们需要为每个服务配置一个agent，首先创建两个与producer和consumer服务对应的目录：
+
+
