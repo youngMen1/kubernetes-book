@@ -178,5 +178,6 @@ public interface ProducerClient {
 ```
 
 完成代码编写后，接下来我们需要为每个服务配置一个agent，首先创建两个与producer和consumer服务对应的目录：
+19037705-9afd99497109a03e.webp
 
 
