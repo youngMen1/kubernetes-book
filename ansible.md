@@ -66,9 +66,28 @@ Ansible系统由控制主机和被管理主机组成,控制主机不支持window
 * Connectior Plugins: ansible基于连接插件连接到各个主机上,默认是使用ssh
 * Host Inventory: 记录由Ansible管理的主机信息，包括端口、密码、ip等
 
+## 1.3.Ansible特点
 
+部署简单, 只需要在控制主机上部署ansible环境,被控制端上只要求安装ssh和python 2.5以上版本,这个对于类unix系统来说相当与无需配置
 
+1.no angents: 被管控节点无需安装agent
+2.no server: 无服务端,使用是直接调用命名
+3.modules in any languages: 基于模块工作, 可以使用任意语言开发模块
+4.易读的语法: 基于yaml语法编写playbook
+5.基于推送模式: 不同于puppet的拉取模式,直接由调用者控制变更在服务器上发生的时间
+6.模块是幂等性的:定义的任务已存在则不会做任何事情,意味着在同一台服务器上多次执行同一个playbook是安全的
 
+## 1.4.Ansible程序目录结构
+
+* 配置文件: **/etc/ansible/**
+* 执行文件目录: /usr/bin/
+* lib依赖库: /usr/lib/python2.7/site-packages/ansible/
+* help文件: /usr/lib/python2.7/site-packages/ansible
+
+作者：drfung
+链接：https://www.jianshu.com/p/c82737b5485c
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 
