@@ -338,6 +338,8 @@ playbook是由一个或多个“play”组成的列表。play的主要功能在�
 ** hosts: hosts用于指定要执行指定任务的主机，其可以是一个或多个由冒号分隔主机组
 user: 指定远程主机上的执行任务的用户,还可以指定sudo用户等
 
+* Variable section: 定义playbook运行时使用的变量
+* Task section: 定义要在远程主机上运行的任务列表
 
 # 3.参考
 
