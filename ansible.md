@@ -370,7 +370,7 @@ changed: [192.168.57.11]
 PLAY RECAP *********************************************************************************************************************
 192.168.57.11              : ok=3    changed=2    unreachable=0    failed=0   
 
-# cat /etc/motd 
+ cat /etc/motd 
 WARNING: Use by master ONLY
 ```
 **playbook安装配置apache实战**
