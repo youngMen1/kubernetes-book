@@ -74,8 +74,6 @@ ansible内置多种云计算相关模块,如aws,openstack,docker等,下图是ans
 
 通过playbook和dockerfile相结合的方式生成镜像, 示例如下:
 
-
-
 ```
 FROM ansible/ubuntu14.04-ansible:stable
 MAINTAINER xxx
