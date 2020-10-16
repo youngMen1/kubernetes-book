@@ -311,7 +311,27 @@ setup # 该模块主要用于收集信息，是通过调用facts组件来实现�
 ```
 
 # 3.5.基于playbook执行
+playbook是由一个或多个“play”组成的列表。play的主要功能在于将事先归并为一组的主机装扮成事先通过ansible中的task定义好的角色。从根本上来讲，所谓task无非是调用ansible的一个module。将多个play组织在一个playbook中，即可以让它们联同起来按事先编排的机制同唱一台大戏。
 
+下面是一个简单示例:
+
+```
+- hosts: master
+  user: root
+  vars:
+    - motd_warning: 'WARNING: Use by master ONLY'
+  tasks:
+    - name: setup a MOTD
+      copy: dest=/etc/motd content="{{ motd_warning }}"
+      notify: say something
+  handlers:
+    - name: say something
+      command: echo "copy OK"
+```
+
+**playbooks的组成部分**
+
+* Target section: 定义要运行playbook的远程主机组
 
 
 # 3.参考
