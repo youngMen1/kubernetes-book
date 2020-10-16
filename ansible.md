@@ -131,8 +131,8 @@ ansible依赖于Python 2.6或更高的版本、paramiko、PyYAML及Jinja2。
 **ansible配置文件查找顺序**
 
 1.检查环境变量ANSIBLE_CONFIG指向的路径文件(export ANSIBLE_CONFIG=/etc/ansible.cfg)；
-2.~/.ansible.cfg，检查当前目录下的ansible.cfg配置文件；
-3./etc/ansible.cfg检查etc目录的配置文件。
+2.`~/.ansible.cfg`，检查当前目录下的ansible.cfg配置文件；
+3.`/etc/ansible.cfg`检查etc目录的配置文件。
 
 **ansible配置文件**
 
