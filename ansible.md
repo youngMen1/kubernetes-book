@@ -86,6 +86,9 @@ Ansible系统由控制主机和被管理主机组成,控制主机不支持window
 
 # 2.Ansible任务执行
 
+## 2.1.Ansible任务执行模式
+
+Ansible任务执行模式分为以下两种:
 
 
 
