@@ -263,7 +263,7 @@ root:x:0:0:root:/root:/bin/bash
 operator:x:11:0:operator:/root:/sbin/nologin
 ```
 
-可以通过ansible-doc -l列出所有可用的module,常用的module有:
+可以通过`ansible-doc -l`列出所有可用的module,常用的module有:
 
 
 ```
@@ -282,9 +282,10 @@ script # 将本地的脚本在远端服务器运行
 setup # 该模块主要用于收集信息，是通过调用facts组件来实现的,以变量形式存储主机上的信息
 ```
 
-**ansible -s <module-name>**可以查看指定module的用法,或者参看官方帮助文档:
+**`ansible -s <module-name>`**可以查看指定module的用法,或者参看官方帮助文档:
 
 ```
+
 # ansible-doc -s service
 - name: Manage services
   service:
@@ -308,6 +309,7 @@ setup # 该模块主要用于收集信息，是通过调用facts组件来实现�
                                setting can force a specific module. Normally it uses the value
                                of the 'ansible_service_mgr' fact and falls back to the old
                                'service' module when none matching is found.
+                               
 ```
 
 # 3.5.基于playbook执行
@@ -327,6 +329,7 @@ playbook是由一个或多个“play”组成的列表。play的主要功能在�
   handlers:
     - name: say something
       command: echo "copy OK"
+      
 ```
 
 **playbooks的组成部分**
