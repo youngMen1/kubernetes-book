@@ -63,7 +63,7 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 
 # 3.ansible使用实例
 
-# 41.参考
+# 4.参考
 
 Ansible总结：[https://www.jianshu.com/p/c82737b5485c](https://www.jianshu.com/p/c82737b5485c)
 
