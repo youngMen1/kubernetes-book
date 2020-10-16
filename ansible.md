@@ -80,9 +80,9 @@ Ansible系统由控制主机和被管理主机组成,控制主机不支持window
 ## 1.4.Ansible程序目录结构
 
 * 配置文件: **/etc/ansible/**
-* 执行文件目录: /usr/bin/
-* lib依赖库: /usr/lib/python2.7/site-packages/ansible/
-* help文件: /usr/lib/python2.7/site-packages/ansible
+* 执行文件目录: **/usr/bin/**
+* lib依赖库: **/usr/lib/python2.7/site-packages/ansible/**
+* help文件: **/usr/lib/python2.7/site-packages/ansible**
 
 作者：drfung
 链接：https://www.jianshu.com/p/c82737b5485c
