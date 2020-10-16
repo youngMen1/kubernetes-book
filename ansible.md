@@ -202,11 +202,87 @@ ntp_server=ntp.com
 nfs_server=nfs.com
 ```
 
+**inventory其他的参数**
+
+ansible基于ssh连接inventory中指定的远程主机时，还可以通过参数指定其交互方式；这些参数如下所示：
 
 
 
+```
+ansible_ssh_host # 远程主机
+ansible_ssh_port # 指定远程主机ssh端口
+ansible_ssh_user # ssh连接远程主机的用户,默认root
+ansible_ssh_pass # 连接远程主机使用的密码,在文件中明文,建议使用--ask-pass或者使用SSH keys
+ansible_sudo_pass # sudo密码, 建议使用--ask-sudo-pass
+ansible_connection # 指定连接类型: local, ssh, paramiko
+ansible_ssh_private_key_file # ssh 连接使用的私钥
+ansible_shell_type # 指定连接对端的shell类型, 默认sh,支持csh,fish
+ansible_python_interpreter # 指定对端使用的python编译器的路径
+```
+
+# 3.4.基于ad-hoc模式运行
+
+ansible通过ssh实现配置管理、应用部署、任务执行等功能，因此，需要事先配置ansible端能基于密钥认证的方式联系各被管理节点。
+
+ansible命令使用语法:
 
 
+```
+ansible <host-pattern> [-f forks] [-m module_name] [-a args]
+    -m module：默认为command
+```
+
+例如:
+
+1.定义好inventory后可以调用ping模块来检测网络是否可达
+
+
+```
+# ansible all -m ping
+192.168.57.22 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+192.168.57.11 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+```
+
+2.使用command模块远程执行命令:
+
+```
+# 如果/etc/passwd文件存在就执行grep命令
+# ansible all -m command -a 'removes=/etc/passwd grep root /etc/passwd' 
+192.168.57.22 | SUCCESS | rc=0 >>
+root:x:0:0:root:/root:/bin/bash
+operator:x:11:0:operator:/root:/sbin/nologin
+
+192.168.57.11 | SUCCESS | rc=0 >>
+root:x:0:0:root:/root:/bin/bash
+operator:x:11:0:operator:/root:/sbin/nologin
+```
+
+可以通过ansible-doc -l列出所有可用的module,常用的module有:
+
+
+```
+ping # 主机连通性测试
+command # 在远程主机上执行命令,不支持管道
+shell # 在远程主机上调用shell解析器,支持管道命令个
+copy # 用于将文件复制到远程主机,支持设定内容和修改权限.
+file # 创建文件,创建连接文件,删除文件等
+fetch # 从远程复制文件到本地
+cron # 管理cron计划任务
+yum # 用于模块的安装
+service # 管理服务
+user # 管理用户账号
+group # 用户组管理
+script # 将本地的脚本在远端服务器运行
+setup # 该模块主要用于收集信息，是通过调用facts组件来实现的,以变量形式存储主机上的信息
+```
+
+**ansible -s <module-name>**可以查看指定module的用法,或者参看官方帮助文档:
 
 
 
