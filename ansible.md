@@ -64,7 +64,7 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 
 # 4.Ansible速度优化
 
-# 5.Ansible 与 docker
+# 5.Ansible与docker
 
 # 6.参考
 
