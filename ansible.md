@@ -22,6 +22,10 @@ Ansible被定义为配置管理工具,配置管理工具通常具有以下功能
 | 配置文件格式 | Ruby 语法格式 | YAML | YAML |
 | 命令行执行 | 不支持，大师可以通过配置模块实现 | 支持 | 支持 |
 
+
+
+## 1.1.Ansible基本架构
+
 # 2.参考
 
 Ansible总结：[https://www.jianshu.com/p/c82737b5485c](https://www.jianshu.com/p/c82737b5485c)
