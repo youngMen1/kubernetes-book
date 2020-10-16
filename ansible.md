@@ -142,6 +142,69 @@ db1.com
 db2.com
 db3.com
 ```
+* 如果主机名称遵循相似的命名模式，还可以使用列表的方式标识各主机，例如：
+
+
+```
+[webservers]
+www[01:50].example.com
+
+[databases]
+db-[a:f].example.com
+```
+* 主机变量: 可以在inventory中定义主机时为其添加主机变量以便于在playbook中使用。例如：
+
+
+```
+[webservers]
+www1.com http_port=80 maxRequestsPerChild=808
+www2.com http_port=8080 maxRequestsPerChild=909
+```
+
+* 组变量
+
+```
+[webservers]
+www1.com
+www2.com
+
+[webservers:vars]
+ntp_server=ntp.com
+nfs_server=nfs.com
+```
+**inventory其他的参数**
+
+ansible基于ssh连接inventory中指定的远程主机时，还可以通过参数指定其交互方式；这些参数如下所示：
+
+
+
+```
+ansible_ssh_host # 远程主机
+ansible_ssh_port # 指定远程主机ssh端口
+ansible_ssh_user # ssh连接远程主机的用户,默认root
+ansible_ssh_pass # 连接远程主机使用的密码,在文件中明文,建议使用--ask-pass或者使用SSH keys
+ansible_sudo_pass # sudo密码, 建议使用--ask-sudo-pass
+ansible_connection # 指定连接类型: local, ssh, paramiko
+ansible_ssh_private_key_file # ssh 连接使用的私钥
+ansible_shell_type # 指定连接对端的shell类型, 默认sh,支持csh,fish
+ansible_python_interpreter # 指定对端使用的python编译器的路径
+```
+
+## 3.4.基于ad-hoc模式运行
+ansible通过ssh实现配置管理、应用部署、任务执行等功能，因此，需要事先配置ansible端能基于密钥认证的方式联系各被管理节点。
+
+ansible命令使用语法:
+
+
+```
+ansible <host-pattern> [-f forks] [-m module_name] [-a args]
+    -m module：默认为command
+```
+
+
+
+
+
 
 
 
@@ -175,6 +238,9 @@ EXPOSE 8000
 
 CMD ["gunicorn_django", "-c", "gunicorn.conf.py"]
 ```
+
+
+
 ## 5.2.启动容器
 
 ansible可以通过docker模块来操作容器,示例如下:
