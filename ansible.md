@@ -197,9 +197,28 @@ ansible命令使用语法:
 
 
 ```
+
 ansible <host-pattern> [-f forks] [-m module_name] [-a args]
     -m module：默认为command
+    
 ```
+例如:
+
+1.定义好inventory后可以调用ping模块来检测网络是否可达
+
+
+```
+# ansible all -m ping
+192.168.57.22 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+192.168.57.11 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+```
+
 
 
 
