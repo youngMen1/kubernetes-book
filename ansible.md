@@ -66,6 +66,51 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 
 # 5.Ansible与docker
 
+ansible内置多种云计算相关模块,如aws,openstack,docker等,下图是ansible与docker相关的模块:
+
+6078939-dd7555be152cfb66.webp
+
+## 5.1.使用ansible创建docker镜像
+
+通过playbook和dockerfile相结合的方式生成镜像, 示例如下:
+
+
+
+```
+FROM ansible/ubuntu14.04-ansible:stable
+MAINTAINER xxx
+
+ADD ansible /srv/ansible
+WORKDIR /srv/ansible
+
+RUN ansible-playbook web-app.yaml -c local
+
+VOLUME /srv/project/static
+
+WORKDIR /srv/project
+
+EXPOSE 8000
+
+CMD ["gunicorn_django", "-c", "gunicorn.conf.py"]
+```
+## 5.2.启动容器
+
+ansible可以通过docker模块来操作容器,示例如下:
+
+
+```
+- name: start the postgres container
+  docker:
+    image: postgres:9.4
+    name: postgres
+    public_all_ports: True
+    env:
+        POSTGRES_USER: "{{ database_user }}"
+        POSTFRES_PASSWORD: "{{ database_password }}"
+```
+
+
+
 # 6.参考
 
 Ansible总结：[https://www.jianshu.com/p/c82737b5485c](https://www.jianshu.com/p/c82737b5485c)
