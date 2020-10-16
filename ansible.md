@@ -78,6 +78,25 @@ ansible主要的管理方式,通过多个task的集合完成一类功能,可以�
 1.编译安装
 ansible依赖于Python 2.6或更高的版本、paramiko、PyYAML及Jinja2。
 
+
+```
+# yum -y install python-jinja2 PyYAML python-paramiko python-babel python-crypto
+# tar xf ansible-1.5.4.tar.gz
+# cd ansible-1.5.4
+# python setup.py build
+# python setup.py install
+# mkdir /etc/ansible
+# cp -r examples/* /etc/ansible
+```
+
+2.rpm包安装
+
+```
+# yum install ansible
+```
+
+
+
 # 4.Ansible速度优化
 
 # 5.Ansible与docker
