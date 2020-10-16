@@ -129,7 +129,7 @@ ansible依赖于Python 2.6或更高的版本、paramiko、PyYAML及Jinja2。
 
 **ansible配置文件查找顺序**
 
-1.检查环境变量ANSIBLE_CONFIG指向的路径文件(export ANSIBLE_CONFIG=/etc/ansible.cfg)；
+1.检查环境变量ANSIBLE_CONFIG指向的路径文件`(export ANSIBLE_CONFIG=/etc/ansible.cfg)；`
 2.`~/.ansible.cfg`，检查当前目录下的ansible.cfg配置文件；
 3.`/etc/ansible.cfg`检查etc目录的配置文件。
 
@@ -281,11 +281,11 @@ script # 将本地的脚本在远端服务器运行
 setup # 该模块主要用于收集信息，是通过调用facts组件来实现的,以变量形式存储主机上的信息
 ```
 
-**`ansible -s <module-name>`**可以查看指定module的用法,或者参看官方帮助文档:
+`ansible -s <module-name>`可以查看指定module的用法,或者参看官方帮助文档:
 
 ```
 
-# ansible-doc -s service
+ansible-doc -s service
 - name: Manage services
   service:
       arguments:             # Additional arguments provided on the command line
