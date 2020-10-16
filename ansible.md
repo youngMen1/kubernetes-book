@@ -84,10 +84,8 @@ Ansible系统由控制主机和被管理主机组成,控制主机不支持window
 * lib依赖库: **/usr/lib/python2.7/site-packages/ansible/**
 * help文件: **/usr/lib/python2.7/site-packages/ansible**
 
-作者：drfung
-链接：https://www.jianshu.com/p/c82737b5485c
-来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+## 2.ansible任务执行
+
 
 
 
