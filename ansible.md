@@ -68,7 +68,7 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 
 ansible内置多种云计算相关模块,如aws,openstack,docker等,下图是ansible与docker相关的模块:
 
-6078939-dd7555be152cfb66.webp
+![](/static/image/6078939-dd7555be152cfb66.webp)
 
 ## 5.1.使用ansible创建docker镜像
 
