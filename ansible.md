@@ -173,6 +173,39 @@ db2.com
 db3.com
 ```
 
+* 如果主机名称遵循相似的命名模式，还可以使用列表的方式标识各主机，例如：
+
+
+```
+[webservers]
+www[01:50].example.com
+
+[databases]
+db-[a:f].example.com
+```
+* 主机变量: 可以在inventory中定义主机时为其添加主机变量以便于在playbook中使用。例如：
+
+```
+[webservers]
+www1.com http_port=80 maxRequestsPerChild=808
+www2.com http_port=8080 maxRequestsPerChild=909
+```
+
+* 组变量
+```
+[webservers]
+www1.com
+www2.com
+
+[webservers:vars]
+ntp_server=ntp.com
+nfs_server=nfs.com
+```
+
+
+
+
+
 
 
 
