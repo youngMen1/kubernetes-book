@@ -374,8 +374,7 @@ PLAY RECAP *********************************************************************
 # cat /etc/motd 
 WARNING: Use by master ONLY
 ```
-**
-playbook安装配置apache实战**
+**playbook安装配置apache实战**
 
 # 3.参考
 
