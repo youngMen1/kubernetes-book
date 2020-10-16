@@ -152,7 +152,13 @@ ansible 有许多参数，下面我们列出一些常见的参数：
 ```
 
 ## 3.3.定义Inventory(主机列表)
+ansible的主要功用在于批量主机操作，为了便捷地使用其中的部分主机，可以在inventory file中将其分组命名。默认的inventory file为/etc/ansible/hosts。
+inventory file可以有多个，且也可以通过Dynamic Inventory来动态生成。
 
+作者：drfung
+链接：https://www.jianshu.com/p/c82737b5485c
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 
