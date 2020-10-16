@@ -56,12 +56,12 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 * help文件: /usr/lib/python2.7/site-packages/ansible
 
 
+# 2.Ansible任务执行
 
 
 
 
-
-# 2.参考
+# 3.参考
 
 Ansible总结：[https://www.jianshu.com/p/c82737b5485c](https://www.jianshu.com/p/c82737b5485c)
 
