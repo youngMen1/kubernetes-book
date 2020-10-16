@@ -10,6 +10,30 @@ Ansible被定义为配置管理工具,配置管理工具通常具有以下功能
 
 常用的自动化运维工具技术特性比较:
 
+| 项目 |
+| :--- |
+
+
+|  | Puppet | SaltStack | Ansible |
+| :--- | :--- | :--- | :--- |
+| 开发语言 | Ruby | Python | Python |
+| 是否有客户端 | 有 | 有 | 无 |
+| 是否支持二次开发 | 不支持 | 支持 | 支持 |
+| 服务器与远程机器是否相互验证 | 是 | 是 | 是 |
+| 服务器与远程机器的通信是否加密 | 是，标准的SSL协议 | 是，使用AES加密 | 是，使用OpenSSH |
+| 平台支持 | AIX , BSD, HP-UX, Linux , Mac OSX , Solaris, Windows | BSD, Linux , Mac OS X , Solaris, Windows | AIX , BSD , HP-UX , Linux , Mac OS X , Solaris |
+| 是否提供Web UI | 提供 | 提供 | 提供，但是是商业版本 |
+| 配置文件格式 | Ruby 语法格式 | YAML | YAML |
+| 命令行执行 | 不支持，大师可以通过配置模块实现 | 支持 | 支持 |
+
+  
+
+
+
+
+
+
 # 2.参考
 
-Ansible总结：https://www.jianshu.com/p/c82737b5485c
+Ansible总结：[https://www.jianshu.com/p/c82737b5485c](https://www.jianshu.com/p/c82737b5485c)
+
