@@ -26,6 +26,8 @@ Ansible被定义为配置管理工具,配置管理工具通常具有以下功能
 
 ansible系统由控制主机和被管理主机组成,控制主机不支持windows平台
 
+![](/static/image/6078939-1799907d732a3e87.webp)
+
 # 2.参考
 
 Ansible总结：[https://www.jianshu.com/p/c82737b5485c](https://www.jianshu.com/p/c82737b5485c)
