@@ -54,6 +54,17 @@ Ansible被定义为配置管理工具,配置管理工具通常具有以下功能
 
 ## 1.2.Ansible基本架构
 
+Ansible系统由控制主机和被管理主机组成,控制主机不支持windows平台
+
+![](/static/image/6078939-1799907d732a3e87.webp)
+
+* 核心: ansible
+* Core Modules: ansible自带的模块
+* Custom Modules: 核心模块功能不足时,用户可以添加扩展模块
+* Plugins: 通过插件来实现记录日志,发送邮件或其他功能
+* Playbooks: 剧本,YAML格式文件，多个任务定义在一个文件中，定义主机需要调用哪些模块来完成的功能
+* Connectior Plugins: ansible基于连接插件连接到各个主机上,默认是使用ssh
+* Host Inventory: 记录由Ansible管理的主机信息，包括端口、密码、ip等
 
 
 
