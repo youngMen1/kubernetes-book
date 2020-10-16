@@ -48,6 +48,13 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 * 模块是幂等性的:定义的任务已存在则不会做任何事情,意味着在同一台服务器上多次执行同一个playbook是安全的
 
 
+## 1.3.ansible程序目录结构
+
+* 配置文件: /etc/ansible/
+* 执行文件目录: /usr/bin/
+* lib依赖库: /usr/lib/python2.7/site-packages/ansible/
+* help文件: /usr/lib/python2.7/site-packages/ansible
+
 
 
 
