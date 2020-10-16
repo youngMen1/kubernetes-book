@@ -104,9 +104,54 @@ ansible主要的管理方式,通过多个task的集合完成一类功能,可以�
 
 # 3.Ansible使用实例
 
+## 3.1 安装
+
+1.编译安装
+ansible依赖于Python 2.6或更高的版本、paramiko、PyYAML及Jinja2。
 
 
+```
+# yum -y install python-jinja2 PyYAML python-paramiko python-babel python-crypto
+# tar xf ansible-1.5.4.tar.gz
+# cd ansible-1.5.4
+# python setup.py build
+# python setup.py install
+# mkdir /etc/ansible
+# cp -r examples/* /etc/ansible
+```
 
+2.rpm包安装
+
+```
+# yum install ansible
+```
+
+## 3.2 修改配置文件
+
+**ansible配置文件查找顺序**
+
+1.检查环境变量ANSIBLE_CONFIG指向的路径文件(export ANSIBLE_CONFIG=/etc/ansible.cfg)；
+2.~/.ansible.cfg，检查当前目录下的ansible.cfg配置文件；
+3./etc/ansible.cfg检查etc目录的配置文件。
+
+**ansible配置文件**
+
+ansible 有许多参数，下面我们列出一些常见的参数：
+
+
+```
+    inventory = /etc/ansible/hosts      #这个参数表示资源清单inventory文件的位置
+    library = /usr/share/ansible        #指向存放Ansible模块的目录，支持多个目录方式，只要用冒号（：）隔开就可以
+    forks = 5       #并发连接数，默认为5
+    sudo_user = root        #设置默认执行命令的用户
+    remote_port = 22        #指定连接被管节点的管理端口，默认为22端口，建议修改，能够更加安全
+    host_key_checking = False       #设置是否检查SSH主机的密钥，值为True/False。关闭后第一次连接不会提示配置实例
+    timeout = 60        #设置SSH连接的超时时间，单位为秒
+    log_path = /var/log/ansible.log     #指定一个存储ansible日志的文件（默认不记录日志）
+    
+```
+
+## 3.3.定义Inventory(主机列表)
 
 
 
