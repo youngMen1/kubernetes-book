@@ -36,7 +36,7 @@ ansible系统由控制主机和被管理主机组成,控制主机不支持window
 * Connectior Plugins: ansible基于连接插件连接到各个主机上,默认是使用ssh
 * Host Inventory: 记录由Ansible管理的主机信息，包括端口、密码、ip等
 
-
+## 1.2.ansible特点
 
 
 # 2.参考
